@@ -35,6 +35,11 @@ const Body = () => {
     }, []);
 
     async function getRestaurants(){
+        const apiUrl = process.env.REACT_APP_SWIGGY_API_URL;
+        const lat = process.env.REACT_APP_SWIGGY_LAT;
+        const lng = process.env.REACT_APP_SWIGGY_LNG;
+
+    
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.952862214938285&lng=80.7915697619319&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const json = await data.json();
         console.log(
