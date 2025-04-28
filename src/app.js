@@ -38,7 +38,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import Cart from "./components/cart";
+import Cart from "./components/Cart";
 
 //Chunking
 //Code Splitting
