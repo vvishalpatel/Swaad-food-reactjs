@@ -10,7 +10,7 @@ import About from "../assets/About.png";
 
 const Title = () => (
     <div className="flex items-center">
-        <img src={AppLogo} alt="swaad" className="w-40 h-auto pl-4 " />
+        <img src={AppLogo} alt="swaad" className="w-40 h-auto pl-10 " />
     </div>
 );
 
@@ -31,30 +31,30 @@ const Header = () => {
 
 
     return (
-        <div className="flex items-center justify-end z-20 bg-[#db7e1e] shadow-md w-screen top-0 left-0 right-0">
+        <div className="flex items-center justify-end z-20 bg-[#db7e1e] shadow-md w-full top-0 left-0 right-0">
             <Title />
-            <div className="nav-items">
-                <ul className="flex py-19 px-80 text-lg">
+            <div className="nav-items ml-auto">
+                <ul className="flex items-end py-2 space-x-2 text-sm">
                 <Link to="/">
-                <li className="flex items-center px-8">
+                <li className="flex  px-4">
                    <img src={Home} alt="Home" className="w-4 h-4 mr-2" />
                     Home
                 </li>
                     </Link>
                     <Link to="/About">
-                <li className="flex items-center px-8">
+                <li className="flex items-center px-4">
                    <img src={About} alt="About" className="w-4 h-4 mr-2" />
                     About
                 </li>
                     </Link>
                     <Link to="/SignIn">
-                <li className="flex items-center px-8">
+                <li className="flex items-center px-4">
                    <img src={Contact} alt="SignIn" className="w-4 h-4 mr-2" />
                     SignIn
                 </li>
                 </Link>
                     <Link to ="/cart">
-                    <li>🛒 Cart ({cartItems.length} items)</li>
+                    <li className=" flex items-center px-4">🛒 Cart ({cartItems.length})</li>
                     </Link>
                 </ul>
             </div>

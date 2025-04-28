@@ -14,7 +14,7 @@ const Cart = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
-    <h1 className="font-bold text-4xl text-center mb-6 text-gray-800">Cart items ({cartItems.length})</h1>
+    <h1 className="font-bold text-2xl text-center mb-6 text-gray-800">Cart items ({cartItems.length})</h1>
 
     <button
       className="bg-red-500 text-white py-2 px-6 rounded-full hover:bg-red-700 transition duration-300 ease-in-out mb-6 block mx-auto"
@@ -23,7 +23,7 @@ const Cart = () => {
       Clear Cart
     </button>
 
-    <div className="flex flex-wrap gap-6 justify-center">
+    <div className="flex  gap-9 justify-center">
       {cartItems.map((item) => (
         <FoodItem key={item.id} {...item} />
       ))}
