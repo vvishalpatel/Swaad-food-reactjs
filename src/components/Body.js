@@ -35,12 +35,19 @@ const Body = () => {
     }, []);
 
     async function getRestaurants(){
-        const apiUrl = process.env.REACT_APP_SWIGGY_API_URL;
-        const lat = process.env.REACT_APP_SWIGGY_LAT;
-        const lng = process.env.REACT_APP_SWIGGY_LNG;
+        const lat = process.env.REACT_APP_SWIGGY_LAT || "27.952862214938285";
+        const lng = process.env.REACT_APP_SWIGGY_LNG || "80.7915697619319";
 
     
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.952862214938285&lng=80.7915697619319&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.952862214938285&lng=80.7915697619319&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        
+        const swiggyApiUrl = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
+        
+        // Encode the URL for the proxy
+        const encodedUrl = encodeURIComponent(swiggyApiUrl);
+        
+        // Use our proxy API route
+        const data = await fetch(`/api/proxy?url=${encodedUrl}`);
         const json = await data.json();
         console.log(
             json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
