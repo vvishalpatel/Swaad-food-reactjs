@@ -36,6 +36,6 @@ It allows users to browse restaurants, view menus, explore food options and addi
 
 ##  Live Demo
 
-Live project here: [Swaad](https://swaad-food-reactjs-wfg2.vercel.app/)
+Live project here: [Swaad](https://swaad-food-reactjs-wfg2.vercel.app/) . 
 Feel free to navigate through the application, provide feedback.
 
