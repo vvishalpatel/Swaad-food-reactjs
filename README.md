@@ -3,7 +3,7 @@
 **Swaad** is a simple and efficient food ordering platform inspired by Swiggy.  
 It allows users to browse restaurants, view menus, explore food options and adding items to cart — with real-time Swiggy API integration using a custom-built proxy server to avoid CORS issues.
 
----
+
 
 ## 🚀 Features
 
@@ -15,7 +15,7 @@ It allows users to browse restaurants, view menus, explore food options and addi
 - Redux Toolkit - Efficient state management and seamless Add to Cart functionality with the Redux Toolkit library
 - CORS-free integration using a Serverless proxy
 
----
+
 
 ##  Tech Stack
 
@@ -23,7 +23,7 @@ It allows users to browse restaurants, view menus, explore food options and addi
 - **Backend Proxy:** Node.js Serverless function (`api/proxy.js`) {Not have deep knowledge of this till now,just done that to solve CORS issue}
 - **Hosting:** Vercel 
 
----
+
 
 ##  How It Works
 
